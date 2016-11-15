@@ -1,0 +1,66 @@
+---
+title: "Human Activity Recognition using Smartphones"
+author: "Melkamu"
+date: "11/11/2016"
+output: html_document
+---
+
+### Human Activity Recognition Using Smartphones Dataset
+The data was obtained from www.smartlab.ws. The experiments included in the data were conducted on 30 volunteers that were asked to perform 6 activities labelled (respective number lables in brackets) as:
+
+WALKING (1), 
+WALKING_UPSTAIRS(2),
+WALKING_DOWNSTAIRS(3), 
+SITTING(4), STANDING(5) and 
+LAYING(6). 
+
+The following features were included in the data:
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+For each of the signals lised above, the following estimates were made: 
+
+mean(): Mean value, 
+std(): Standard deviation, 
+mad(): Median absolute deviation,  
+max(): Largest value in array, 
+min(): Smallest value in array, 
+sma(): Signal magnitude area, 
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range,  
+entropy(): Signal entropy, 
+arCoeff(): Autorregresion coefficients with Burg order equal to 4, 
+correlation(): correlation coefficient between two signals, 
+maxInds(): index of the frequency component with largest magnitude, 
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency, 
+skewness(): skewness of the frequency domain signal, 
+kurtosis(): kurtosis of the frequency domain signal,  
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window, 
+angle(): Angle between to vectors.
+
+### Generating the tidy data
+
+As they performed these activities, the subjects wore smartphones on their waist and their movements/activities were monitored. The subjects were randomly assigned into two groups: the test group (in which 30% of the subjects were assigned) and the training group (that comprises the remaining 70% of the subjects). The data obtained were filtered and used for this analysis. The data contains 561 variables measured on 30 subjects performing 6 activities. The variables included in the dataset were:
+
+
+To generate the tidy data, I read the files from the "train" and "test"" folders. I replaced the column names with the exact names of the variables stored in the features.txt file. 
+
+Then, I extracted the measurements on the mean and standard deviation and gave descriptive names to the activities using the names given in the "activity label" file. 
+
+To create a second tidy data set with averages of each variable for each activity and subject, I arranged the data frame by subject and activity and summarized the grouped data using the mean function. Then, I wrote the tidy data into a text file. 
